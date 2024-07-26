@@ -61,8 +61,8 @@ public class RewardNetworkImpl implements RewardNetwork {
 		MonetaryAmount amount = restaurant.calculateBenefitFor(account, dining);
 		AccountContribution contribution = account.makeContribution(amount);
 		accountRepository.updateBeneficiaries(account);
-		RewardConfirmation reward = rewardRepository.confirmReward(contribution, dining);
+		RewardConfirmation confirmation = rewardRepository.confirmReward(contribution, dining);
 		// TODO-08: Return the corresponding reward confirmation
-		return reward;
+		return confirmation;
 	}
 }
